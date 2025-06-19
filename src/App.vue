@@ -7,7 +7,11 @@ import CreateAssessmentForm from "./components/CreateAssessmentForm.vue"
 import GradesDisplay from "./components/GradesDisplay.vue"
 import StorageOptions from "./components/StorageOptions.vue"
 
-const calculatedGeneralAverage = 95.238723
+import { calculateSubjectGrade } from "./utils/gradesCalculator"
+
+const calculatedSubjectGrade = computed(() => {
+  return calculateSubjectGrade(subjectData.value.categories);
+});
 
 // the root structure of the data of a single subject
 const subjectData = ref({
@@ -72,7 +76,7 @@ function resetData() {
 
         <div class="average-section">
             <h3>Subject General Average: </h3>
-            <p class="average-value">{{ calculatedGeneralAverage.toFixed(2) }}%</p>
+            <p class="average-value">{{ (calculatedSubjectGrade * 100).toFixed(4) }}</p>
         </div>
 
         <section class="grading-input-forms">
