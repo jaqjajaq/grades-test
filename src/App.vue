@@ -10,7 +10,7 @@ import StorageOptions from "./components/StorageOptions.vue"
 import { calculateSubjectGrade } from "./utils/gradesCalculator"
 
 const calculatedSubjectGrade = computed(() => {
-  return calculateSubjectGrade(subjectData.value.categories);
+    return calculateSubjectGrade(subjectData.value.categories);
 });
 
 // the root structure of the data of a single subject
@@ -95,7 +95,4 @@ function resetData() {
 </template>
 
 <style scoped>
-* {
-    font-family: 'Red Hat Text' !important;
-}
 </style>
