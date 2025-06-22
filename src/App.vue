@@ -50,7 +50,6 @@ function handleAddAssessment(newAssessment) {
     }
 }
 
-
 function saveData() {
     localStorage.setItem("subjectData", JSON.stringify(subjectData.value))
 }
@@ -71,7 +70,7 @@ function resetData() {
 
 <template>
     <div class="subject-overview">
-        <h2>{{ subjectData.name }}</h2>
+        <h1>{{ subjectData.name }}</h1>
         <p class="teacher-name">Teacher: {{ subjectData.teacher }}</p>
 
         <div class="average-section">
@@ -95,4 +94,9 @@ function resetData() {
 </template>
 
 <style scoped>
+.subject-overview {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 72px 72px 30vh;
+}
 </style>

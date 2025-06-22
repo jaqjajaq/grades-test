@@ -4,8 +4,7 @@ const props = defineProps({
         type: Object,
         required: true
     }
-})
-
+});
 </script>
 
 <template>
@@ -16,6 +15,4 @@ const props = defineProps({
     </section>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

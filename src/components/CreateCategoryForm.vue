@@ -33,4 +33,10 @@ function handleAddCategory() {
     </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+</style>
